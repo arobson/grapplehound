@@ -1,0 +1,42 @@
+{
+  "name": "grappelhound",
+  "version": "0.1.0",
+  "description": "A simple CLI for working with gists",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "bin": {
+    "gh": "./bin/grappelhound"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/arobson/grappelhound"
+  },
+  "keywords": [
+    "gist",
+    "cli"
+  ],
+  "author": "Alex Robson",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/arobson/grappelhound/issues"
+  },
+  "homepage": "https://github.com/arobson/grappelhound",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-mocha": "^1.0.0",
+    "should": "^4.0.4"
+  },
+  "dependencies": {
+    "commander": "^2.5.0",
+    "debug": "^2.1.0",
+    "github": "^0.2.3",
+    "globulesce": "^0.1.1",
+    "inquirer": "^0.7.2",
+    "lodash": "^2.4.1",
+    "machina": "^0.4.0-1",
+    "moment": "^2.8.4",
+    "when": "^3.6.3"
+  }
+}
