@@ -1,6 +1,6 @@
 {
   "name": "grappelhound",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A simple CLI for working with gists",
   "main": "src/index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "commander": "^2.5.0",
     "debug": "^2.1.0",
     "github": "^0.2.3",
-    "globulesce": "^0.1.1",
+    "globulesce": "~0.1.1",
     "inquirer": "^0.7.2",
     "lodash": "^2.4.1",
     "machina": "^0.4.0-1",
