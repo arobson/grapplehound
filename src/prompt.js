@@ -31,7 +31,7 @@ function addFiles( description, list ) {
 							choices: eligible
 						}
 					], function( r ) {
-						var scrubbed = _.map( r.files, function( x ) { return x.split( path.sep ).join( ":" ); } );
+						var scrubbed = _.map( r.files, function( x ) { return path.relative( process.cwd(), x ).split( path.sep ).join( ":" ); } );
 						gist.files = gist.files.concat( scrubbed );
 						gists.remember( description, gist );
 						resolve( description );
