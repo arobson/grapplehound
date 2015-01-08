@@ -72,8 +72,8 @@ function createToken( principle ) {
 	var create = lift( github.authorization.create );
 	var request = {
 			scopes: [ "gist" ],
-			note: "Token obtained by the GrappelHound on your behalf, " + moment( Date.now() ).toLocaleString(),
-			note_url: "https://github.com/arobson/grappelhound" // jshint ignore:line
+			note: "Token obtained by the GrappleHound on your behalf, " + moment( Date.now() ).toLocaleString(),
+			note_url: "https://github.com/arobson/grapplehound" // jshint ignore:line
 		};
 	if( principle.tfa ) {
 		request.headers = {
@@ -129,7 +129,7 @@ function findToken( principle ) {
 	}
 	return get( request )
 		.then( function( list ) {
-			var matches = _.where( list, { note_url: "https://github.com/arobson/grappelhound" } ); //jshint ignore:line
+			var matches = _.where( list, { note_url: "https://github.com/arobson/grapplehound" } ); //jshint ignore:line
 			if( matches.length ) {
 				return _.merge( principle, _.pick( matches[ 0 ], "id", "token" ) );
 			} else {
@@ -175,7 +175,7 @@ function updateGist( description ) {
 		} else {
 			newList = _.without( newList, file );
 			msg.files[ file ] = null;
-		}		
+		}
 	} );
 	var update = lift( github.gists.edit );
 	update( msg )

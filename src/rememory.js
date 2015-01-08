@@ -15,7 +15,7 @@ function remember( memory, key, val ) {
 	var json = exists ? JSON.parse( fs.readFileSync( memory ) ) : {};
 	if( !val && !exists ) {
 		return undefined;
-	}	
+	}
 	if( !val ) {
 		return json[ key ];
 	} else {
@@ -25,7 +25,7 @@ function remember( memory, key, val ) {
 }
 
 module.exports = function( local ) {
-	var memory = local ? path.join( process.cwd(), ".grappelhound.json" ) : path.join( process.env.HOME, ".grappelhound.json" );
+	var memory = local ? path.join( process.cwd(), ".grapplehound.json" ) : path.join( process.env.HOME, ".grapplehound.json" );
 	return {
 		forget: forget.bind( undefined, memory ),
 		remember: remember.bind( undefined, memory )
